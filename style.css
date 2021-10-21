@@ -1,0 +1,297 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+body {
+  background-color: #3bcaae;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: black;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ------box title------ */
+
+.box__title h1 {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+.title-income {
+  color: green;
+}
+
+.title-expense {
+  color: rgb(201, 25, 25);
+}
+
+/* ------box (income expense)------ */
+
+.box__income-expense {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.box__income {
+  margin-right: 50px;
+}
+
+.box__income-title {
+  background-color: green;
+}
+
+.box__expense-title {
+  background-color: rgb(201, 25, 25);
+}
+
+.box__income-title,
+.box__expense-title {
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.box__income-text,
+.box__expense-text {
+  border: none;
+  margin-bottom: 15px;
+}
+
+.box__income-text input,
+.box__expense-text input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ------box balance------ */
+
+.box__balance {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.box__balance-title {
+  background-color: green;
+  color: white;
+  max-width: 350px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box__balance-money {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.balance-money-days,
+.balance-money-mounths,
+.balance-money-years {
+  display: flex;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.balance-money-days,
+.balance-money-mounths {
+  border-bottom: 1px solid green;
+}
+
+.money-days-title,
+.money-mounths-title,
+.money-years-title {
+  margin-left: 10px;
+}
+
+.money-days-text,
+.money-mounths-text,
+.money-years-text {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+/* ------box moneybox------ */
+
+.box__moneybox {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.moneybox-1 {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.moneybox-1-title {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.moneybox-input {
+  margin-bottom: 15px;
+}
+
+.moneybox-1 {
+  margin-bottom: 20px;
+}
+
+.moneybox-1-text {
+  margin-bottom: 10px;
+}
+
+.moneybox-2 {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.moneybox-2-in {
+  margin-right: 50px;
+}
+
+.moneybox-2-in-title,
+.moneybox-2-out-title {
+  background-color: green;
+  color: white;
+  width: 150px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.moneybox-2-out-title {
+  background-color: rgb(201, 25, 25);
+}
+
+.moneybox-2-in-input,
+.moneybox-2-out-input {
+  font-size: 24px;
+  width: 150px;
+  padding-left: 70px;
+  border: none;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ------@media------ */
+
+@media (max-width: 700px) {
+  .box__title h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .box__title h1 {
+    font-size: 35px;
+  }
+
+  .box__income {
+    margin-right: 30px;
+  }
+
+  .moneybox-2-in {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  body {
+    font-size: 20px;
+  }
+
+  .box__title h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .box__income {
+    margin-right: 20px;
+  }
+
+  .moneybox-2-in {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 415px) {
+  body {
+    font-size: 18px;
+  }
+
+  .box__title h1 {
+    font-size: 28px;
+  }
+
+  .box__income {
+    margin-right: 15px;
+  }
+
+  .moneybox-2-in {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .box__title h1 {
+    font-size: 26px;
+  }
+
+  .box__income {
+    margin-right: 10px;
+  }
+
+  .moneybox-2-in {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 325px) {
+  .box__income {
+    margin-right: 10px;
+  }
+
+  .moneybox-2-in {
+    margin-right: 8px;
+  }
+}

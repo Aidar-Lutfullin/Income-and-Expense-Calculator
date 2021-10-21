@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income and Expense Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <wrapper class="box">
+      <div class="container">
+        <div class="box__title">
+          <h1>
+            <span class="title-income">Income</span> and
+            <span class="title-expense">Expense</span> Calculator
+          </h1>
+        </div>
+
+        <div class="box__income-expense">
+          <div class="box__income">
+            <div class="box__income-title">Доходы в месяц</div>
+            <div class="box__income-text">
+              <input
+                class="input" 
+                id="income-input-1" 
+                type="number" 
+                placeholder="Зарплата" />
+            </div>
+            <div class="box__income-text">
+              <input
+                class="input" 
+                id="income-input-2" 
+                type="number" 
+                placeholder="Фриланс" />
+            </div>
+            <div class="box__income-text">
+              <input
+                class="input"
+                id="income-input-3"
+                type="number"
+                placeholder="Инвестиции"
+              />
+            </div>
+            <div class="box__income-text">
+              <input
+                class="input"
+                id="income-input-4"
+                type="number"
+                placeholder="Доп. доход"
+              />
+            </div>
+          </div>
+
+          <div class="box__expense">
+            <div class="box__expense-title">Расходы в месяц</div>
+            <div class="box__expense-text">
+              <input
+                class="input" 
+                id="expense-input-1" 
+                type="number" 
+                placeholder="ЖКХ" />
+            </div>
+            <div class="box__expense-text">
+              <input
+                class="input"
+                id="expense-input-2"
+                type="number"
+                placeholder="Продукты"
+              />
+            </div>
+            <div class="box__expense-text">
+              <input
+                class="input"
+                id="expense-input-3"
+                type="number"
+                placeholder="Транспорт"
+              />
+            </div>
+            <div class="box__expense-text">
+              <input
+                class="input" 
+                id="expense-input-4" 
+                type="number" 
+                placeholder="Разное" />
+            </div>
+          </div>
+        </div>
+
+        <div class="box__balance">
+          <div class="box__balance-title">Доступно в</div>
+          <div class="box__balance-money">
+            <div class="balance-money-days">
+              <div class="money-days-title">День</div>
+              <div class="money-days-text" id="money-days">400</div>
+            </div>
+            <div class="balance-money-mounths">
+              <div class="money-mounths-title">Месяц</div>
+              <div class="money-mounths-text" id="money-mounths">12 000</div>
+            </div>
+            <div class="balance-money-years">
+              <div class="money-years-title">Год</div>
+              <div class="money-years-text" id="money-years">144 000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box__moneybox">
+          <div class="moneybox-1">
+            <div class="moneybox-1-title">Копилка %</div>
+            <div class="moneybox-1-input">
+              <input class="moneybox-input" id="moneybox-input" type="range" min="0" max="100" value="0"></input>
+            </div>
+            <div class="moneybox-1-text"><span id="moneybox-text">0</span>%</div>
+          </div>
+
+          <div class="moneybox-2">
+            <div class="moneybox-2-in">
+              <div class="moneybox-2-in-title">Копим</div>
+              <input class="moneybox-2-in-input" id="in-input" type="number" value="0" readonly></input>
+            </div>
+            <div class="moneybox-2-out">
+              <div class="moneybox-2-out-title">Тратим</div>
+              <input class="moneybox-2-out-input" id="out-input" type="number" value="0" readonly></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </wrapper>
+    
+    <script src="./main.js"></script>
+  </body>
+</html>
