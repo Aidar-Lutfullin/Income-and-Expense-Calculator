@@ -24,6 +24,8 @@ const moneyboxInput = document.getElementById("moneybox-input");
 const moneyInInput = document.getElementById("in-input");
 const moneyOutInput = document.getElementById("out-input");
 
+let totalPrecents = 0;
+
 const inputs = document.querySelectorAll(".input");
 for (input of inputs) {
   input.addEventListener("input", () => {
@@ -49,3 +51,9 @@ const countingAvailableMoney = () => {
   totalMounths = totalPerMonth - totalCosts;
   moneyMounths.value = totalMounths;
 };
+
+moneyboxInput.addEventListener("input", (e) => {
+  const totalPrecentEl = document.getElementById("moneybox-text");
+  totalPrecents = e.target.value;
+  totalPrecentEl.innerHTML = totalPrecents;
+});
