@@ -24,12 +24,14 @@ const moneyboxInput = document.getElementById("moneybox-input");
 const moneyInInput = document.getElementById("in-input");
 const moneyOutInput = document.getElementById("out-input");
 
+let accumulation = 0;
 let totalPrecents = 0;
 
 const inputs = document.querySelectorAll(".input");
 for (input of inputs) {
   input.addEventListener("input", () => {
     countingAvailableMoney();
+    calculationPrecents();
   });
 }
 
@@ -56,4 +58,18 @@ moneyboxInput.addEventListener("input", (e) => {
   const totalPrecentEl = document.getElementById("moneybox-text");
   totalPrecents = e.target.value;
   totalPrecentEl.innerHTML = totalPrecents;
+  calculationPrecents();
 });
+
+const calculationPrecents = () => {
+  accumulation = ((totalMounths * totalPrecents) / 100).toFixed();
+  moneyInInput.value = accumulation;
+
+  moneyOutInput.value = totalMounths - accumulation;
+
+  totalDays = (moneyOutInput.value / 30).toFixed();
+  moneyDays.value = totalDays;
+
+  totalYears = accumulation * 12;
+  moneyYears.value = totalYears;
+};
